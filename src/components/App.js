@@ -21,7 +21,7 @@ function App() {
   })
  
   //Add a new transaction to the state using form
-  const AddTransactionForm = (newTransaction) => {
+  const addTransaction = (newTransaction) => {
     setTransactions([...transactions,newTransaction])
   };
 
@@ -46,8 +46,9 @@ function App() {
     <div>
       <h1>Bank Transactions App</h1>
       <SearchBar onSearch={handleSearch}/>
-      {/* <TransactionTable />
-      <AddTransactionForm /> */}
+      <TransactionTable transactions={transactions} />
+      <AddTransactionForm addTransaction={addTransaction} />
+    
     </div>
   );
 }
