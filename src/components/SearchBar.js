@@ -6,7 +6,7 @@ const SearchBar = ({onSearch}) => {
     const handleSearch = (event) => {
         const newSearchTerm = event.target.value;
         setSearchTerm(newSearchTerm);
-        onSearch(newSearchTerm);
+     onSearch(newSearchTerm);
 
     }
 

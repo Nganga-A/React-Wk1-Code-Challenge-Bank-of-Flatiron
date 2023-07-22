@@ -10,6 +10,12 @@ function AddTransactionForm({addTransaction}) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    //Form Validation
+    if (!date || !description || !amount) {
+        alert('Please fill in all required fields');
+        return; //exit function when validation fails
+    }
+
     //Create a new transaction obj
     const newTransaction = {
         date,

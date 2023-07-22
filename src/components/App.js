@@ -17,8 +17,8 @@ function App() {
       .then((data) => {
         setTransactions(data);
         setOriginalTransactions(data);
-      })
-  })
+      });
+  }, []);
  
   //Add a new transaction to the state using form
   const addTransaction = (newTransaction) => {
@@ -27,18 +27,18 @@ function App() {
 
 
   //Filter based on search term
-  const handleSearch = (searChTerm) => {
+  const handleSearch = (searchTerm) => {
     
-    if (searChTerm === '') {
+    if (searchTerm === '') {
       //if searchbar is empty display original lists of transactions
       setTransactions(originalTransactions)
 
     } else {
       
       const filteredTransactions = originalTransactions.filter((transaction) => 
-      transaction.description.toLowerCase().includes(searChTerm.toLowerCase())
+      transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
       );
-      setTransactions(filteredTransactions);
+      setTransactions([...filteredTransactions]); //Make a new array of filtered Transactions (don't directly modify the state array)
     }
   };
 
