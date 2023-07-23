@@ -104,6 +104,20 @@
       "category": "MMM",
       "amount": -1,
       "id": 16
+    },
+    {
+      "date": "2023-07-12",
+      "description": "jjjjjjjjj",
+      "category": "MMMM",
+      "amount": 77777,
+      "id": 17
+    },
+    {
+      "date": "2023-07-12",
+      "description": "jjjjjjjjj",
+      "category": "nnn",
+      "amount": 744,
+      "id": 18
     }
   ]
 }

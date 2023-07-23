@@ -14,7 +14,8 @@ function TransactionTable({transactions, onDelete}) {
          <p>No results found.</p> 
     
     )  : (
-
+        <div>
+        <h2>Transactions Table</h2>    
         <table>
             <thead>
                 <tr>
@@ -33,7 +34,7 @@ function TransactionTable({transactions, onDelete}) {
                         <td>{transaction.category}</td>
                         <td>{transaction.amount}</td>
                         <td>
-                            <button onClick={() => onDelete(transaction.id)} >
+                            <button id='deleteBtn' onClick={() => onDelete(transaction.id)} >
                                 Delete
                             </button>
                         </td>
@@ -41,6 +42,7 @@ function TransactionTable({transactions, onDelete}) {
                 ))}
             </tbody>
         </table>
+        </div>
     )}
 
     </div>

@@ -1,18 +1,35 @@
-.inline-components {
-    align-items: center;
-    display: inline-flex;
-    background-color:red;
-    
+body{
+    background-color: #a4c7d8;
+}
+.header{
+    text-align: center;
+    background-color: #a4c7d8;
+    border-radius: 5px;
+    padding: 10px;
 }
 
-.inline-components > * {
-    margin: 10px;
-  }
+h1{
+   margin: 10px;
+   text-align: center;
+   
+}
+
+.inline-components {
+    align-items: center;
+    display: inline-flex;   
+}
+
+
 
 table {
-    width: 100%;
+    width: 98%;
     border-collapse: collapse;
+    margin: auto;
     border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 50px;
+    
   }
 
   th,
@@ -53,3 +70,100 @@ td {
     padding: 10px;
   }
   
+  .sortButton {
+    padding: 8px 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .sortButton:hover {
+    background-color: #0056b3;
+  }
+
+  input[type='date'],
+  input[type='text'],
+  input[type='number'] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    margin: 10px;
+    color: white;
+  }
+
+form {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    
+    width: fit-content;
+    padding: 20px;
+    margin: auto;
+    background-color: #f2f2f2;
+}
+
+.formDivs {
+    margin: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+#addBtn {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background-color: #0056b3;
+}
+
+#deleteBtn {
+    padding: 4px 8px;
+    font-size: 14px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#deleteBtn:hover {
+    background-color: #c82333;
+  }
+
+.flex-Container {
+    display: flex;
+}
+
+.form-Container {
+    flex: 40%; 
+    padding: 10px;
+  }
+  
+  .table-Container {
+    flex: 60%; 
+    padding: 10px;
+  }

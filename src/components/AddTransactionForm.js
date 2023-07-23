@@ -37,39 +37,54 @@ function AddTransactionForm({addTransaction}) {
   };
 
   return (
-
+    <div className='formContainer'>
+    <h2>Add New Transaction Form</h2>
     <form onSubmit={handleSubmit} >
-        <input
-          type='text'
-          placeholder='Date'
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-        />
 
-        <input
-         type="text"
-         placeholder="Description"
-         value={description}
-         onChange={(e) => setDescription(e.target.value)}
-        />
+        <div className='formInputs'>
+          <label htmlFor="date">Date:</label>
+          <input
+            type="date"
+            id="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+          />
+        </div>
+
+        <div className='formInputs'>
+          <label htmlFor="description">Description:</label>
+          <input
+            type="text"
+            id="description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+        </div>
+
+        <div className='formInputs'>
+          <label htmlFor="category">Category:</label>
+          <input
+            type="text"
+            id="category"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          />
+        </div>
         
 
-        <input
-         type="text"
-         placeholder="Category"
-         value={category}
-         onChange={(e) => setCategory(e.target.value)}
-        />
+        <div className='formInputs'>
+          <label htmlFor="amount">Amount:</label>
+          <input
+            type="number"
+            id="amount"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+          />
+        </div>
 
-        <input
-         type="number"
-         placeholder="Amount"
-         value={amount}
-         onChange={(e) => setAmount(e.target.value)}
-        />
-
-      <button type="submit">Add Transaction</button>
+      <button id='addBtn' type="submit">Add Transaction</button>
     </form>
+    </div>
   );
 };
 

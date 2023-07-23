@@ -76,14 +76,22 @@ function App() {
 
   return (
     <div>
+      <div className='header'>
       <h1>Bank Transactions App</h1>
       <div className='inline-components'> 
          <SearchBar onSearch={handleSearch}/> 
          <SortButton onSort={handleSort} /> 
       </div>
-      <TransactionTable transactions={transactions} onDelete={handleDelete}/>
-      <AddTransactionForm addTransaction={addTransaction} />
-    
+      </div>
+      <div className='flex-Container'>
+          <div className='table-Container'>
+            <TransactionTable transactions={transactions} onDelete={handleDelete}/>
+          </div>
+
+          <div className='form-Container'>
+            <AddTransactionForm addTransaction={addTransaction} />
+          </div>
+       </div>
     </div>
   );
 }
