@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import TransactionTable from './TransactionTable';
 import AddTransactionForm from './AddTransactionForm';
 import SearchBar from './SearchBar';
+import SortButton from './SortButton';
+
 
 function App() {
   
-
   const [transactions, setTransactions] = useState([]); //holds current transactions in table and updates when filtered..initially data fetched
   const [originalTransactions, setOriginalTransactions] =useState([]); //original list of transactions fetched and remains the same
 
@@ -42,10 +43,22 @@ function App() {
     }
   };
 
+
+  //Filter Transactions alphabetically by category
+  const handleSort = () => {
+    const sortedTransactions = [...transactions].sort((a, b) =>
+    a.category.localeCompare(b.category)
+    );
+    setTransactions(sortedTransactions);
+  }
+
   return (
     <div>
       <h1>Bank Transactions App</h1>
-      <SearchBar onSearch={handleSearch}/>
+      <div className='inline-components'> 
+         <SearchBar onSearch={handleSearch}/> 
+         <SortButton onSort={handleSort} /> 
+      </div>
       <TransactionTable transactions={transactions} />
       <AddTransactionForm addTransaction={addTransaction} />
     

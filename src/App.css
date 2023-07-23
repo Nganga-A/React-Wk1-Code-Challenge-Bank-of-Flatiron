@@ -1,0 +1,11 @@
+/* .inline-components {
+    align-items: center;
+    display: inline-flex;
+    background-color:red;
+    
+}
+
+.inline-components > * {
+    margin: 10px;
+  }
+ */

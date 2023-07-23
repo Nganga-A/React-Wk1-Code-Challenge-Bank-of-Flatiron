@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 const SearchBar = ({onSearch}) => {
     const [searchTerm, setSearchTerm] = useState('');
 
+    //function to handle Search
     const handleSearch = (event) => {
         const newSearchTerm = event.target.value;
         setSearchTerm(newSearchTerm);
