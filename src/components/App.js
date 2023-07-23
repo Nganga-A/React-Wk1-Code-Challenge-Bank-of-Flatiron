@@ -67,6 +67,13 @@ function App() {
     setTransactions(sortedTransactions);
   }
 
+  //Delete a Transaction by its Id
+  const handleDelete = (id) => { 
+    //Remaining transactions after deleting 
+    const updatedTransactions = transactions.filter((transaction) => transaction.id !== id);
+    setTransactions(updatedTransactions) 
+  }
+
   return (
     <div>
       <h1>Bank Transactions App</h1>
@@ -74,7 +81,7 @@ function App() {
          <SearchBar onSearch={handleSearch}/> 
          <SortButton onSort={handleSort} /> 
       </div>
-      <TransactionTable transactions={transactions} />
+      <TransactionTable transactions={transactions} onDelete={handleDelete}/>
       <AddTransactionForm addTransaction={addTransaction} />
     
     </div>

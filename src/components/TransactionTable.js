@@ -1,7 +1,7 @@
 import React from 'react'
 
-function TransactionTable({transactions}) {
-   //Convert the transactions object to an array
+function TransactionTable({transactions, onDelete}) { 
+   //Convert the transactions object to an array 
    const transactionsArray = Object.values(transactions);
 
    //Condition to check for no results
@@ -22,6 +22,7 @@ function TransactionTable({transactions}) {
                     <th>Description</th>
                     <th>Category</th>
                     <th>Amount</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +32,11 @@ function TransactionTable({transactions}) {
                         <td>{transaction.description}</td>
                         <td>{transaction.category}</td>
                         <td>{transaction.amount}</td>
+                        <td>
+                            <button onClick={() => onDelete(transaction.id)} >
+                                Delete
+                            </button>
+                        </td>
                     </tr>
                 ))}
             </tbody>
