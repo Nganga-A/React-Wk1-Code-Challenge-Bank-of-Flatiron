@@ -5,13 +5,14 @@ function AddTransactionForm({addTransaction}) {
   const [date,setDate] = useState('');
   const [description, setDescription] = useState('');
   const [amount, setAmount] = useState('');
+  const [category, setCategory] = useState('');
 
   //Handle Submit Function
   const handleSubmit = (e) => {
     e.preventDefault();
 
     //Form Validation
-    if (!date || !description || !amount) {
+    if (!date || !description || !category || !amount) {
         alert('Please fill in all required fields');
         return; //exit function when validation fails
     }
@@ -20,6 +21,7 @@ function AddTransactionForm({addTransaction}) {
     const newTransaction = {
         date,
         description,
+        category,
         amount:parseFloat(amount),
     };
 
@@ -29,6 +31,7 @@ function AddTransactionForm({addTransaction}) {
         //Reset form fields
         setDate('');
         setDescription('');
+        setCategory('');
         setAmount('');
     
   };
@@ -48,6 +51,14 @@ function AddTransactionForm({addTransaction}) {
          placeholder="Description"
          value={description}
          onChange={(e) => setDescription(e.target.value)}
+        />
+        
+
+        <input
+         type="text"
+         placeholder="Category"
+         value={category}
+         onChange={(e) => setCategory(e.target.value)}
         />
 
         <input

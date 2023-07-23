@@ -21,9 +21,24 @@ function App() {
       });
   }, []);
  
+
   //Add a new transaction to the state using form
   const addTransaction = (newTransaction) => {
-    setTransactions([...transactions,newTransaction])
+
+    //Post Request to the server to add the new transaction
+    fetch('http://localhost:3000/transactions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newTransaction),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // Update the local state with the new transaction
+        setTransactions([...transactions, data]);
+      })
+    
   };
 
 
