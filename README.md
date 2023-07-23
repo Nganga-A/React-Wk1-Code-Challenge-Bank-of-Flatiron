@@ -37,3 +37,8 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 
+## Author
+Created by [Abed Nganga Njuguna ](https://github.com/Nganga-A)
+
+## License
+This project is licensed under the [MIT License](LICENSE).
