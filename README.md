@@ -12,6 +12,12 @@ Bank Transactions App is a React application that allows users to view their rec
 ### Contributions
 Contributions are welcome! If you find any issues or want to add new features, please feel free to create a pull request.
 
+### Author
+Created by [Abed Nganga Njuguna ](https://github.com/Nganga-A)
+
+### License
+This project is licensed under the [MIT License](LICENSE).
+
 
 ## Getting Started
 Follow the steps below to set up and run the Bank Transactions App on your local machine.
@@ -37,8 +43,4 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 
-## Author
-Created by [Abed Nganga Njuguna ](https://github.com/Nganga-A)
 
-## License
-This project is licensed under the [MIT License](LICENSE).
